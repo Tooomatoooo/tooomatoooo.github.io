@@ -25,6 +25,8 @@ nav_order: 2
 
     **Abstract**: The $q^5$-characteristics model estimates costs of equity as Lewellen's (2015) out-of-sample forecasts from cross-sectional regressions. The $q^5$-cost of equity is competitive in evaluation tests, outperforming the accounting implied cost of equity in predicting cross-sectional returns. The $q^5$-cost of equity is precise at the industry level and aligned with average factor premiums. Its firm-level distribution is weakly left-skewed, whereas the accounting implied cost of equity is right-skewed. However, the accounting cost of equity outperforms in the time series. Factor models perform poorly in out-of-sample tests. Gradient-boosted trees improve on cross-sectional regressions, but not reliably.
 
+     - **Conferences**: UConn Finance Conference
+
 <br>
 <br>
 
