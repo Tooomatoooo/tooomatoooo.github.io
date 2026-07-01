@@ -230,6 +230,11 @@ ul.task-list input[type="checkbox"] {
       }
     }
   }
+
+  // Pull the floated profile image up so it sits closer to the page title.
+  .profile.float-right {
+    margin-top: -3.5rem;
+  }
 }
 
 .post-description {
