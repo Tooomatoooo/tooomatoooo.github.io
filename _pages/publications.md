@@ -14,7 +14,7 @@ nav_order: 2
 1. **What Are Intangibles Worth? Production versus Market Power**
     (Job market paper)
 
-    **Abstract**: Intangibles create value for firms by raising productivity and increasing market power. The first channel boosts growth, while the second could weaken competition. This paper quantifies both channels with a dynamic model in which firms invest in intangible capital to raise production and market power. I combine the model with data to decompose intangible value for each U.S. public firm. By 2024, intangibles derive more value from market power than from production, contributing 28% and 21%, respectively, to aggregate market capitalization. Intangible value rises as market-power value grows within firms and firms with greater production-related intangible value gain market share. Over the firm life cycle, it shifts from production toward market power. Incorporating the value of intangible market power restores 60% of the decline in the value premium and explains firms' incentives to invest in intangibles.
+    **Abstract**: Intangibles create value for firms by raising productivity and increasing market power. The first channel boosts growth, while the second could weaken competition. This paper quantifies both channels with a dynamic model in which firms invest in intangible capital to raise production and market power. I combine the model with data to decompose intangible value for each U.S. public firm. By 2024, intangibles derive more value from market power than from production, contributing 28% and 21% to aggregate market capitalization, respectively. Intangible value rises as market-power value grows within firms and firms with greater production-related intangible value gain market share. Over the firm life cycle, it shifts from production toward market power. Incorporating the value of intangible market power restores 60% of the decline in the value premium and explains firms' incentives to invest in intangibles.
 
      - **Conferences**: 27th Macro Finance Society Workshop PhD poster session; 21st Annual Olin Finance Conference PhD poster session
 
@@ -31,7 +31,7 @@ nav_order: 2
 <br>
 
 {:start="3"}
-3. [Investment-based Costs of Equity](/assets/pdf/InvCE2026April.pdf) (with Chen Xue and Lu Zhang)
+3. [Investment-based Costs of Equity](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6506281) (with Chen Xue and Lu Zhang)
 
     **Abstract**: The $q^5$-characteristics model estimates costs of equity as Lewellen's (2015) out-of-sample forecasts from cross-sectional regressions. The $q^5$-cost of equity is competitive in evaluation tests, outperforming the accounting implied cost of equity in predicting cross-sectional returns. The $q^5$-cost of equity is precise at the industry level and aligned with average factor premiums. Its firm-level distribution is weakly left-skewed, whereas the accounting implied cost of equity is right-skewed. However, the accounting cost of equity outperforms in the time series. Factor models perform poorly in out-of-sample tests. Gradient-boosted trees improve on cross-sectional regressions, but not reliably.
 
