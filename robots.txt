@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://tooomatoooo.github.io/sitemap.xml
+Sitemap: https://yichengliu.com/sitemap.xml
