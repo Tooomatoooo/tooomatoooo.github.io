@@ -26,9 +26,11 @@ _styles: >
 ---
 
 {% if page._styles %}
+
   <style type="text/css">
     {{ page._styles }}
   </style>
+
 {% endif %}
 
 <div class="post">
@@ -68,5 +70,6 @@ _styles: >
         <a href="{{ '/' | relative_url }}">← back to the serious pages</a>
       </p>
     </div>
+
   </article>
 </div>
