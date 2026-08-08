@@ -509,6 +509,29 @@ footer.sticky-bottom {
   }
 }
 
+.footer-bear {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    transform: scale(1.35) rotate(-8deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-bear {
+    transition: none;
+
+    &:hover,
+    &:focus {
+      transform: none;
+    }
+  }
+}
+
 // CV
 
 .cv {

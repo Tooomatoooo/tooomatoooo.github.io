@@ -8,6 +8,7 @@ profile:
   align: right
   image: prof_pic_yl.jpg
   image_circular: false # crops the image to make it circular
+  full_resolution: true # serve the original so "save image" gives the full-res file
   more_info: 
   # >
   #   <p>555 your office number</p>

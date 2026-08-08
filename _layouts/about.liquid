@@ -27,9 +27,13 @@ layout: default
           {% endif %}
           {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
+          {% comment %}
+            avoid_scaling serves the original file rather than a downscaled variant,
+            so "save image" gives the visitor the full-resolution photo.
+          {% endcomment %}
           {%
             include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
+            cache_bust=true avoid_scaling=page.profile.full_resolution
           %}
         {% endif %}
         {% if page.profile.more_info %}
