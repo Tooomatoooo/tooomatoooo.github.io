@@ -60,10 +60,16 @@ const baseActions = [
   {%- for p in site.pages -%}
     {%- for paper in p.papers -%}
       {
-        {%- assign title = paper.title | escape | strip -%}
+        {%- comment -%}
+          jsonify, not escape: ninja-keys renders the title through unsafeHTML
+          after wrapping matched characters in <span>, which splits any HTML
+          entity apart and shows it raw. jsonify quotes the string for the JS
+          context without introducing entities.
+        {%- endcomment -%}
+        {%- assign title = paper.title | strip | truncatewords: 20 -%}
         id: "paper-{{ paper.anchor | slugify }}",
-        title: "{{ title | truncatewords: 20 }}",
-        description: "{{ paper.note | escape | strip }}",
+        title: {{ title | jsonify }},
+        description: {{ paper.note | strip | jsonify }},
         section: "Research",
         handler: () => {
           window.location.href = "{{ p.url | relative_url }}#{{ paper.anchor }}";
@@ -363,10 +369,11 @@ const bonusActions = [
   {%- for p in site.pages -%}
     {%- if p.bonus -%}
       {
-        {%- assign title = p.search_title | default: p.title | escape | strip -%}
+        {%- assign title = p.search_title | default: p.title | strip | truncatewords: 13 -%}
+        {%- assign blurb = p.description | strip_html | strip_newlines | strip -%}
         id: "bonus-{{ p.permalink | slugify }}",
-        title: "{{ title | truncatewords: 13 }}",
-        description: "{{ p.description | strip_html | strip_newlines | escape | strip }}",
+        title: {{ title | jsonify }},
+        description: {{ blurb | jsonify }},
         section: "Bonus",
         terms: [{% for t in p.search_terms %}"{{ t | downcase | escape }}",{% endfor %}],
         handler: () => {
