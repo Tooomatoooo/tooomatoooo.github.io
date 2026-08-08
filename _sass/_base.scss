@@ -479,6 +479,9 @@ ul.task-list input[type="checkbox"] {
 // Footer
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
+  // The footer shares the page background, so a hairline keeps content that
+  // scrolls behind this fixed bar from appearing to run into the footer text.
+  border-top: 1px solid var(--global-divider-color);
   font-size: 0.75rem;
 
   .container {
