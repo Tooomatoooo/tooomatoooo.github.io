@@ -5,7 +5,7 @@ permalink: /assets/js/search-data.js
 const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
-ninja.data = [
+const baseActions = [
   {%- for page in site.pages -%}
     {%- if page.permalink == '/' -%}{%- assign about_title = page.title | strip -%}{%- endif -%}
   {%- endfor -%}
@@ -51,6 +51,25 @@ ninja.data = [
         },
       {%- endif -%}
     {%- endif -%}
+  {%- endfor -%}
+  {%- comment -%}
+    Individual papers, so searching a paper's title jumps straight to it on the
+    research page rather than to the top of the page. Driven by the `papers`
+    front matter on that page.
+  {%- endcomment -%}
+  {%- for p in site.pages -%}
+    {%- for paper in p.papers -%}
+      {
+        {%- assign title = paper.title | escape | strip -%}
+        id: "paper-{{ paper.anchor | slugify }}",
+        title: "{{ title | truncatewords: 20 }}",
+        description: "{{ paper.note | escape | strip }}",
+        section: "Research",
+        handler: () => {
+          window.location.href = "{{ p.url | relative_url }}#{{ paper.anchor }}";
+        },
+      },
+    {%- endfor -%}
   {%- endfor -%}
   {%- if site.posts_in_search -%}
     {%- for post in site.posts -%}
@@ -331,3 +350,57 @@ ninja.data = [
     },
   {%- endif -%}
 ];
+
+{%- comment -%}
+  Bonus pages: kept out of the navbar and the sitemap, and out of the search
+  list that shows before anyone types. They only surface once there is a query,
+  so browsing the palette does not give them away. ninja-keys scores against
+  title text plus description, and renders only the title in a result row, so
+  each page carries a search_title holding the word people actually type while
+  the page's own title stays as the bare emoji.
+{%- endcomment -%}
+const bonusActions = [
+  {%- for p in site.pages -%}
+    {%- if p.bonus -%}
+      {
+        {%- assign title = p.search_title | default: p.title | escape | strip -%}
+        id: "bonus-{{ p.permalink | slugify }}",
+        title: "{{ title | truncatewords: 13 }}",
+        description: "{{ p.description | strip_html | strip_newlines | escape | strip }}",
+        section: "Bonus",
+        terms: [{% for t in p.search_terms %}"{{ t | downcase | escape }}",{% endfor %}],
+        handler: () => {
+          {%- if p.redirect contains '://' -%}
+            // Prefer a new tab, but fall back to navigating if a popup blocker
+            // refuses it, so the result always goes somewhere.
+            if (!window.open("{{ p.redirect }}", "_blank")) {
+              window.location.href = "{{ p.redirect }}";
+            }
+          {%- else -%}
+            window.location.href = "{{ p.url | relative_url }}";
+          {%- endif -%}
+        },
+      },
+    {%- endif -%}
+  {%- endfor -%}
+];
+
+ninja.data = baseActions;
+
+// A bonus page appears only once the query is one of its whole words, so
+// partial typing ("c", "ca") never gives one away. Tracking the applied set by
+// id keeps the reassignment from re-triggering this handler indefinitely.
+let appliedBonusKey = "";
+
+ninja.addEventListener("change", (event) => {
+  const query = (event.detail.search || "").trim().toLowerCase();
+  const matched = query
+    ? bonusActions.filter((action) => action.terms.includes(query))
+    : [];
+  const key = matched.map((action) => action.id).join(",");
+
+  if (key !== appliedBonusKey) {
+    appliedBonusKey = key;
+    ninja.data = matched.length ? baseActions.concat(matched) : baseActions;
+  }
+});

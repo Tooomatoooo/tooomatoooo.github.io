@@ -5,37 +5,15 @@ title: 🐻
 description: You found the bear.
 nav: false
 sitemap: false
-_styles: >
-  .secret-bear-title {
-    display: inline-block;
-    font-size: 1.6em;
-    line-height: 1.2;
-    animation: bear-bob 3s ease-in-out infinite;
-  }
-  @keyframes bear-bob {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .secret-bear-title { animation: none; }
-  }
-  .secret-bear-back {
-    margin-top: 2rem;
-    font-size: 0.9rem;
-  }
+bonus: true
+search_title: 🐻 Bear
+# Exact words that reveal this page in search (case-insensitive).
+search_terms: [bear, bears]
 ---
-
-{% if page._styles %}
-
-  <style type="text/css">
-    {{ page._styles }}
-  </style>
-
-{% endif %}
 
 <div class="post">
   <header class="post-header">
-    <h1 class="post-title"><span class="secret-bear-title">🐻</span></h1>
+    <h1 class="post-title"><span class="bonus-title">🐻</span></h1>
   </header>
 
   <article>
@@ -66,7 +44,7 @@ _styles: >
 
       <p>Hope to meet you in person one day!</p>
 
-      <p class="secret-bear-back">
+      <p class="bonus-back">
         <a href="{{ '/' | relative_url }}">← back to the serious pages</a>
       </p>
     </div>

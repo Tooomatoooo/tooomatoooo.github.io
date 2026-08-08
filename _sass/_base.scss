@@ -512,6 +512,45 @@ footer.sticky-bottom {
   }
 }
 
+// Jump targets for individual papers on the research page. The theme only sets
+// scroll-margin-top on headings, and these anchors sit inside list items, so
+// they need their own offset to clear the fixed navbar.
+.paper-anchor {
+  display: block;
+  height: 0;
+  scroll-margin-top: 66px;
+}
+
+// Bonus pages: hidden from the navbar, reachable through search.
+.bonus-title {
+  display: inline-block;
+  font-size: 1.6em;
+  line-height: 1.2;
+  animation: bonus-bob 3s ease-in-out infinite;
+}
+
+@keyframes bonus-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bonus-back {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bonus-title {
+    animation: none;
+  }
+}
+
 .footer-bear {
   display: inline-block;
   text-decoration: none;

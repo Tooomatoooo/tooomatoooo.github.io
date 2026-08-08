@@ -48,7 +48,7 @@ repo_trophies:
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: false
+search_enabled: true
 socials_in_search: false
 posts_in_search: false
 bib_search: false
@@ -95,10 +95,6 @@ newsletter:
 # -----------------------------------------------------------------------------
 # Collections
 # -----------------------------------------------------------------------------
-
-collections:
-  books:
-    output: true
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -201,8 +197,6 @@ jekyll-archives:
       year: "/blog/:year/"
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
-  books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
 display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
 display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
@@ -212,8 +206,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Liu]
+  first_name: [Yicheng, Y.]
 
   style: apa
   locale: en
