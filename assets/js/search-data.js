@@ -38,7 +38,7 @@ const baseActions = [{
           window.location.href = "/research/#intangibles";
         },
       },{id: "paper-subjective-risk-premia",
-        title: "Institutional Investors&#39; Subjective Risk Premia",
+        title: "Institutional Investors' Subjective Risk Premia",
         description: "with Couts, Gonçalves, and Loudis",
         section: "Research",
         handler: () => {
