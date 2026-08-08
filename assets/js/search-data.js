@@ -2,7 +2,7 @@
 const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
-ninja.data = [{
+const baseActions = [{
     id: "nav-about",
     title: "About",
     section: "Navigation",
@@ -30,12 +30,28 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather.html";
-            },},{
+        },{id: "paper-intangibles",
+        title: "What Are Intangibles Worth? Production versus Market Power",
+        description: "Job market paper",
+        section: "Research",
+        handler: () => {
+          window.location.href = "/research/#intangibles";
+        },
+      },{id: "paper-subjective-risk-premia",
+        title: "Institutional Investors&#39; Subjective Risk Premia",
+        description: "with Couts, Gonçalves, and Loudis",
+        section: "Research",
+        handler: () => {
+          window.location.href = "/research/#subjective-risk-premia";
+        },
+      },{id: "paper-investment-based-costs-of-equity",
+        title: "Investment-based Costs of Equity",
+        description: "with Xue and Zhang",
+        section: "Research",
+        handler: () => {
+          window.location.href = "/research/#investment-based-costs-of-equity";
+        },
+      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
@@ -61,4 +77,52 @@ ninja.data = [{
       handler: () => {
         setThemeSetting("system");
       },
-    },];
+    },];const bonusActions = [{id: "bonus-bear",
+        title: "🐻 Bear",
+        description: "You found the bear.",
+        section: "Bonus",
+        terms: ["bear","bears",],
+        handler: () => {window.location.href = "/bear/";},
+      },{id: "bonus-cat",
+        title: "🐈 Cat",
+        description: "A page about cats. Under construction.",
+        section: "Bonus",
+        terms: ["cat","cats",],
+        handler: () => {window.location.href = "/cat/";},
+      },{id: "bonus-games",
+        title: "🎲 Games",
+        description: "Games. Takes you to Murdoku.",
+        section: "Bonus",
+        terms: ["games","game",],
+        handler: () => {// Prefer a new tab, but fall back to navigating if a popup blocker
+            // refuses it, so the result always goes somewhere.
+            if (!window.open("https://murdoku.com/play/", "_blank")) {
+              window.location.href = "https://murdoku.com/play/";
+            }},
+      },{id: "bonus-photography",
+        title: "📷 Photography",
+        description: "Photography. Under construction.",
+        section: "Bonus",
+        terms: ["photography",],
+        handler: () => {window.location.href = "/photography/";},
+      },];
+
+ninja.data = baseActions;
+
+// A bonus page appears only once the query is one of its whole words, so
+// partial typing ("c", "ca") never gives one away. Tracking the applied set by
+// id keeps the reassignment from re-triggering this handler indefinitely.
+let appliedBonusKey = "";
+
+ninja.addEventListener("change", (event) => {
+  const query = (event.detail.search || "").trim().toLowerCase();
+  const matched = query
+    ? bonusActions.filter((action) => action.terms.includes(query))
+    : [];
+  const key = matched.map((action) => action.id).join(",");
+
+  if (key !== appliedBonusKey) {
+    appliedBonusKey = key;
+    ninja.data = matched.length ? baseActions.concat(matched) : baseActions;
+  }
+});
