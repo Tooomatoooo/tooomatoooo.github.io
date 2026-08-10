@@ -89,6 +89,12 @@ const baseActions = [{
         section: "Bonus",
         terms: ["cat","cats",],
         handler: () => {window.location.href = "/cat/";},
+      },{id: "bonus-eight-oddities",
+        title: "The Eight Oddities of Columbus",
+        description: "八大怪 — the eight oddities of Columbus, illustrated.",
+        section: "Bonus",
+        terms: ["八大怪","eight oddities","oddities",],
+        handler: () => {window.location.href = "/eight-oddities/";},
       },{id: "bonus-games",
         title: "🎲 Games",
         description: "Games. Takes you to Murdoku.",
@@ -103,7 +109,7 @@ const baseActions = [{
         title: "📷 Photography",
         description: "Photography. Under construction.",
         section: "Bonus",
-        terms: ["photography",],
+        terms: ["photography","photo","photos",],
         handler: () => {window.location.href = "/photography/";},
       },];
 
