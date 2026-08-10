@@ -8,7 +8,7 @@ sitemap: false
 bonus: true
 search_title: 📷 Photography
 # Exact words that reveal this page in search (case-insensitive).
-search_terms: [photography]
+search_terms: [photography, photo, photos]
 ---
 
 <div class="post">
