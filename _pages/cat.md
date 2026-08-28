@@ -65,7 +65,7 @@ photos:
   </header>
 
   <article>
-    <p class="cat-wall-intro">You searched for cats. Good instinct.</p>
+    <p class="photo-wall-intro">You searched for cats. Good instinct.</p>
 
     {% comment %}
       Three columns at full width, so each image lands in roughly a third of the
@@ -73,7 +73,7 @@ photos:
     {% endcomment %}
     {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | divided_by: 3 }}px, (min-width: 576px) 45vw, 95vw{% endcapture %}
 
-    <div class="cat-wall">
+    <div class="photo-wall">
       {% for photo in page.photos %}
         {% if forloop.index <= 3 %}
           {% assign loading = 'eager' %}
@@ -81,7 +81,7 @@ photos:
           {% assign loading = 'lazy' %}
         {% endif %}
         {% capture photo_path %}assets/img/cats/{{ photo.file }}{% endcapture %}
-        <div class="cat-wall-item">
+        <div class="photo-wall-item">
           {%
             include figure.liquid
             path=photo_path
