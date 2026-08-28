@@ -85,7 +85,7 @@ const baseActions = [{
         handler: () => {window.location.href = "/bear/";},
       },{id: "bonus-cat",
         title: "🐈 Cat",
-        description: "A page about cats. Under construction.",
+        description: "A wall of cat photos.",
         section: "Bonus",
         terms: ["cat","cats",],
         handler: () => {window.location.href = "/cat/";},
