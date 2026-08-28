@@ -549,28 +549,13 @@ footer.sticky-bottom {
   margin-bottom: 1.6rem;
 }
 
-// Shared by the bonus photo pages. Two layouts are available; a wall picks one
-// with a modifier class, and the item rules below are scoped to match.
+// Masonry photo wall built on CSS columns: images keep their own aspect ratio
+// and the browser packs them top-to-bottom, column by column. Shared by the
+// bonus photo pages. Column count is mirrored by the `sizes` capture in each
+// page that uses it — change both together.
 .photo-wall {
-  --photo-wall-gap: 12px;
-}
-
-.photo-wall-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-  // Several photos have blown-out white or near-black edges that dissolve into
-  // the page background, leaving a tile looking like it has an empty strip on
-  // one side. A hairline keeps every edge readable in both themes.
-  border: 1px solid var(--global-divider-color);
-}
-
-// Column layout: CSS multi-column masonry. Photos keep their aspect ratio and
-// the browser packs them top-to-bottom, column by column, so reading order runs
-// down each column rather than across.
-.photo-wall--columns {
   column-count: 1;
-  column-gap: var(--photo-wall-gap);
+  column-gap: 12px;
 
   @media (min-width: 576px) {
     column-count: 2;
@@ -579,48 +564,31 @@ footer.sticky-bottom {
   @media (min-width: 768px) {
     column-count: 3;
   }
-
-  .photo-wall-item {
-    // Stop a photo from being split across two columns.
-    break-inside: avoid;
-    page-break-inside: avoid;
-    margin-bottom: var(--photo-wall-gap);
-  }
 }
 
-// Row layout: a justified grid. Every photo in a row is scaled to one shared
-// height and the row is flush to both edges, so wide photos earn proportionally
-// more width instead of being squeezed into a narrow column.
-//
-// Each item carries its aspect ratio as --ratio (set inline from front matter).
-// Giving both flex-grow and flex-basis that ratio makes the widths within a row
-// proportional to the ratios, which is exactly the condition for equal heights.
-// --row-base sets the notional row height and so controls how many photos land
-// in each row.
-.photo-wall--rows {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--photo-wall-gap);
-  --row-base: 11rem;
+.photo-wall-item {
+  // Stop a photo from being split across two columns.
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 12px;
 
-  @media (max-width: 575px) {
-    // One photo per row on phones: at this base even a wide panorama cannot
-    // share a line, so each gets the full width.
-    --row-base: 22rem;
+  figure {
+    margin: 0;
   }
 
-  .photo-wall-item {
-    flex-grow: var(--ratio, 1);
-    flex-basis: calc(var(--ratio, 1) * var(--row-base));
-    // Let a very wide panorama shrink rather than force a row over the edge.
-    min-width: 0;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    // Several photos have blown-out white edges (a shelf lip, a pale wall) that
+    // dissolve into the page background, leaving the tile looking like it has an
+    // empty strip on top. A hairline keeps every edge readable in both themes.
+    border: 1px solid var(--global-divider-color);
   }
 
-  // Without this the final row stretches its few photos across the full width
-  // at a much larger size than the rest of the wall.
-  &::after {
-    content: "";
-    flex-grow: 999999;
+  // Only walls that opt into medium-zoom advertise it in the cursor.
+  img[data-zoomable] {
+    cursor: zoom-in;
   }
 }
 

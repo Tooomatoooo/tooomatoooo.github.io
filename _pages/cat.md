@@ -73,7 +73,7 @@ photos:
     {% endcomment %}
     {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | divided_by: 3 }}px, (min-width: 576px) 45vw, 95vw{% endcapture %}
 
-    <div class="photo-wall photo-wall--columns">
+    <div class="photo-wall">
       {% for photo in page.photos %}
         {% if forloop.index <= 3 %}
           {% assign loading = 'eager' %}
