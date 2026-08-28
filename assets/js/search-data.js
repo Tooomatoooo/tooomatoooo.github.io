@@ -107,7 +107,7 @@ const baseActions = [{
             }},
       },{id: "bonus-photography",
         title: "📷 Photography",
-        description: "Photography. Under construction.",
+        description: "A wall of photographs.",
         section: "Bonus",
         terms: ["photography","photo","photos",],
         handler: () => {window.location.href = "/photography/";},
