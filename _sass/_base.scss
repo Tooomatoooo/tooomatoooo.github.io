@@ -545,6 +545,47 @@ footer.sticky-bottom {
   font-size: 0.9rem;
 }
 
+.cat-wall-intro {
+  margin-bottom: 1.6rem;
+}
+
+// Masonry photo wall built on CSS columns: images keep their own aspect ratio
+// and the browser packs them top-to-bottom, column by column. Column count is
+// mirrored by the `sizes` capture in _pages/cat.md — change both together.
+.cat-wall {
+  column-count: 1;
+  column-gap: 12px;
+
+  @media (min-width: 576px) {
+    column-count: 2;
+  }
+
+  @media (min-width: 768px) {
+    column-count: 3;
+  }
+}
+
+.cat-wall-item {
+  // Stop a photo from being split across two columns.
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 12px;
+
+  figure {
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    // Several photos have blown-out white edges (a shelf lip, a pale wall) that
+    // dissolve into the page background, leaving the tile looking like it has an
+    // empty strip on top. A hairline keeps every edge readable in both themes.
+    border: 1px solid var(--global-divider-color);
+  }
+}
+
 // Tall multi-panel illustration: cap the width so the panels stay a readable
 // size on wide screens instead of stretching the full content column.
 .oddities-figure {
