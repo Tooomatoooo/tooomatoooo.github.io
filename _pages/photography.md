@@ -80,7 +80,7 @@ photos:
         {% endif %}
         {% capture photo_path %}assets/img/photography/{{ photo.file }}{% endcapture %}
         <div class="photo-wall-item">
-          <a class="spotlight" href="{{ photo_path | relative_url }}" data-description="{{ photo.alt | escape }}">
+          <a class="spotlight" href="{{ photo_path | relative_url }}">
           {%
             include figure.liquid
             path=photo_path
