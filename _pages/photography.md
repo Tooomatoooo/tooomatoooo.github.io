@@ -9,6 +9,12 @@ bonus: true
 search_title: 📷 Photography
 # Exact words that reveal this page in search (case-insensitive).
 search_terms: [photography, photo, photos]
+# Spotlight opens each photo full screen at its real layout size. medium-zoom
+# was unusable here: it keeps the thumbnail's 292px layout box and applies a
+# CSS transform scale, so the browser rasterises ~584 device px and stretches
+# that over the screen. The photo looked blurry no matter how large the file.
+images:
+  spotlight: true
 # Same pattern as _pages/cat.md: the wall is driven from this list so the body
 # stays a single loop. Order is chosen so portrait and landscape alternate in
 # the masonry columns, not by date. Files live in assets/img/photography/.
@@ -65,7 +71,7 @@ photos:
     {% endcomment %}
     {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | divided_by: 3 }}px, (min-width: 576px) 45vw, 95vw{% endcapture %}
 
-    <div class="photo-wall">
+    <div class="photo-wall spotlight-group">
       {% for photo in page.photos %}
         {% if forloop.index <= 3 %}
           {% assign loading = 'eager' %}
@@ -73,8 +79,8 @@ photos:
           {% assign loading = 'lazy' %}
         {% endif %}
         {% capture photo_path %}assets/img/photography/{{ photo.file }}{% endcapture %}
-        {% assign zoom_src = photo_path | relative_url %}
         <div class="photo-wall-item">
+          <a class="spotlight" href="{{ photo_path | relative_url }}" data-description="{{ photo.alt | escape }}">
           {%
             include figure.liquid
             path=photo_path
@@ -82,10 +88,9 @@ photos:
             sizes=sizes
             alt=photo.alt
             loading=loading
-            zoomable=true
-            zoom_src=zoom_src
             cache_bust=true
           %}
+          </a>
         </div>
       {% endfor %}
     </div>

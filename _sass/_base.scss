@@ -586,8 +586,9 @@ footer.sticky-bottom {
     border: 1px solid var(--global-divider-color);
   }
 
-  // Only walls that opt into medium-zoom advertise it in the cursor.
-  img[data-zoomable] {
+  // Only walls whose photos open full screen advertise it in the cursor.
+  a.spotlight {
+    display: block;
     cursor: zoom-in;
   }
 }

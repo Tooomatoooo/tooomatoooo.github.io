@@ -71,15 +71,6 @@
       {% if include.zoomable %}
         data-zoomable
       {% endif %}
-      {% comment %}
-        medium-zoom sizes the zoomed image from naturalWidth. For a srcset with
-        w descriptors the browser reports that density-corrected, so it equals
-        the CSS width and the image barely grows on click. Passing zoom_src
-        gives medium-zoom a standalone full-size source to measure and display.
-      {% endcomment %}
-      {% if include.zoom_src %}
-        data-zoom-src="{{ include.zoom_src }}"
-      {% endif %}
       {% if include.loading %}
         loading="{{ include.loading }}"
       {% elsif site.lazy_loading_images %}
