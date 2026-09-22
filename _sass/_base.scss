@@ -54,6 +54,13 @@ table.table a {
   }
 }
 
+// A bold title inside a link would otherwise be painted by the `strong` rule
+// above, which sets --global-text-color and wins over the anchor's colour --
+// the link renders black and reads as plain text.
+a strong {
+  color: inherit;
+}
+
 .table-dark {
   background-color: transparent;
   &.table-bordered {

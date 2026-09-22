@@ -13,6 +13,12 @@ $blue-color: #0076df !default;
 $blue-color-dark: #00369f !default;
 $cyan-color: #2698ba !default;
 $light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
+
+// Link/accent colour matched to the CV and the paper (\definecolor{linkblue}{HTML}{1155CC}).
+// The dark-theme variant is lightened: #1155cc on the dark background only
+// reaches 2.7:1 contrast, below the 4.5:1 minimum.
+$cv-blue-color: #1155cc !default;
+$cv-blue-color-dark-theme: color.adjust($cv-blue-color, $lightness: 25%);
 $green-color: #00ab37 !default;
 $green-color-lime: #b7d12a !default;
 $green-color-dark: #009f06 !default;

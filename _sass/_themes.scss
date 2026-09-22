@@ -10,8 +10,8 @@
   --global-code-bg-color: #{$code-bg-color-light};
   --global-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
+  --global-theme-color: #{$cv-blue-color};
+  --global-hover-color: #{$cv-blue-color};
   --global-hover-text-color: #{$white-color};
   // The footer blends into the page rather than inverting against it. Defined
   // as references so they follow --global-bg-color / --global-text-color into
@@ -85,8 +85,8 @@ html[data-theme="dark"] {
   --global-code-bg-color: #{$code-bg-color-dark};
   --global-text-color: #{$grey-color-light};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
+  --global-theme-color: #{$cv-blue-color-dark-theme};
+  --global-hover-color: #{$cv-blue-color-dark-theme};
   --global-hover-text-color: #{$white-color};
   // Footer colors intentionally omitted: the :root definitions reference
   // --global-bg-color / --global-text-color and pick up the dark values here.
