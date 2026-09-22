@@ -23,7 +23,7 @@ papers:
 
 <div style="margin-bottom: 0.7em;"></div>
 
-1. <span id="intangibles" class="paper-anchor"></span>**What Are Intangibles Worth? Production versus Market Power**
+1. <span id="intangibles" class="paper-anchor"></span>[**What Are Intangibles Worth? Production versus Market Power**]({{ site.baseurl }}/assets/pdf/Intangibles_YichengLiu.pdf)
     (Job market paper)
 
     **Abstract**: Intangibles create firm value by raising productivity and strengthening market power. The former boosts growth, whereas the latter may weaken competition. I quantify both channels in a dynamic model of intangible investment and decompose intangible value for each U.S. public firm. By 2024, market power accounts for more aggregate market capitalization than production—28% versus 21%. Intangible value grows as within-firm rents rise and firms with larger productivity gains capture market share. Over the firm life cycle, intangible value shifts from productivity toward market power. Intangible-driven market power helps explain the declining value premium and firms’ incentives for intangible investments.
