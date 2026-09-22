@@ -28,7 +28,7 @@ papers:
 
     **Abstract**: Intangibles create firm value by raising productivity and strengthening market power. The former boosts growth, whereas the latter may weaken competition. I quantify both channels in a dynamic model of intangible investment and decompose intangible value for each U.S. public firm. By 2024, market power accounts for more aggregate market capitalization than production—28% versus 21%. Intangible value grows as within-firm rents rise and firms with larger productivity gains capture market share. Over the firm life cycle, intangible value shifts from productivity toward market power. Intangible-driven market power helps explain the declining value premium and firms’ incentives for intangible investments.
 
-     - **Conferences**: 2027 AFA Poster Session; 2026 FMA Special PhD Paper Presentations; 2026 FMA Doctoral Student Consortium; 27th Macro Finance Society Workshop PhD poster session; 21st Annual Olin Finance Conference PhD poster session
+     - **Conferences**: 2027 AFA Poster Session; 2026 FMA Special PhD Paper Presentations; 2026 FMA Doctoral Student Consortium; 27th Macro Finance Society Workshop (Poster); 21st Annual Olin Finance Conference (Poster)
 
 <br>
 
