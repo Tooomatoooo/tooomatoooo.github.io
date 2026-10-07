@@ -24,6 +24,6 @@ Hi, I am Yicheng Liu (刘忆澄). I am a sixth-year PhD candidate in Finance at 
 
 My research lies in the field of asset pricing and macro-finance, with a special focus on intangible capital, market power, and firm valuation.
 
-I will be on the 2026–2027 job market.
+I am on the 2026–2027 job market.
 
 Email: [liu.9716@osu.edu](mailto:liu.9716@osu.edu)
