@@ -26,14 +26,14 @@ papers:
 1. <span id="intangibles" class="paper-anchor"></span>[**What Are Intangibles Worth? Production versus Market Power**]({{ site.baseurl }}/assets/pdf/Intangibles_YichengLiu.pdf)
     (Job market paper)
 
-    **Abstract**: Intangibles create firm value through two fundamentally different channels: production and market power. Production enhances efficiency, whereas market power may weaken competition. I estimate a dynamic firm model and quantify both channels for each U.S. public firm. The market power value of intangibles exceeds their production value and accounts for over a quarter of aggregate market capitalization. Across firms, those with greater production value capture market share, whereas within firms, intangible value shifts toward market power as firms mature. Intangible-driven market power helps explain the value premium decline and predicts intangible investment more strongly than production value does.
+    **Abstract**: How much of intangible capital's value comes from production efficiency versus market power? I estimate a dynamic firm model and quantify both channels for each U.S. public firm. Market power accounts for the majority of intangible value and nearly 30% of aggregate firm value. The two channels evolve differently: across firms, those with greater production value capture market share, whereas within firms, intangible value shifts toward market power as firms mature. Intangible-driven market power also helps explain the value premium decline and predicts intangible investment more strongly than production value does.
 
      - **Conferences**: 2027 AFA Poster Session; 2026 FMA Special PhD Paper Presentations; 2026 FMA Doctoral Student Consortium; 27th Macro Finance Society Workshop (Poster); 21st Annual Olin Finance Conference (Poster)
 
 <br>
 
 {:start="2"}
-2. <span id="subjective-risk-premia" class="paper-anchor"></span>[**Institutional Investors' Subjective Risk Premia: Time Variation and Disagreement**](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4933020) (with Spencer Couts, Andrei Gonçalves, and Johnathan Loudis)
+2. <span id="subjective-risk-premia" class="paper-anchor"></span>[**Institutional Investors' Subjective Risk Premia: Time Variation and Disagreement**]({{ site.baseurl }}/assets/pdf/SubjectiveRiskPremia_YichengLiu.pdf) (with Spencer Couts, Andrei Gonçalves, and Johnathan Loudis)
 
     **Abstract**: We study how institutional investors’ subjective risk premia shape variation in their expected returns over time and across institutions. Our analysis uses long-term Capital Market Assumptions from asset managers and investment consultants from 1987 to 2022. Most of the countercyclicality and overall time variation in institutional expected returns reflects variation in perceived market risk premia, not perceived mispricing or alphas more generally. This risk premium effect is driven almost entirely by variation in perceived risk quantities rather than risk price (risk aversion). Expected return disagreement across institutions rises with macro-financial uncertainty and is also explained primarily by disagreement about market risk premia. However, unlike the time-series results, alphas account for a quantitatively important share of disagreement, and the price and quantity of risk contribute roughly equally to the risk premium effect. These findings provide benchmark moments that asset pricing models should match to be consistent with institutional investors’ beliefs.
 
@@ -43,7 +43,7 @@ papers:
 <br>
 
 {:start="3"}
-3. <span id="investment-based-costs-of-equity" class="paper-anchor"></span>[**Investment-based Costs of Equity**](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6506281) (with Chen Xue and Lu Zhang)
+3. <span id="investment-based-costs-of-equity" class="paper-anchor"></span>[**Investment-based Costs of Equity**]({{ site.baseurl }}/assets/pdf/InvestmentCostsOfEquity_YichengLiu.pdf) (with Chen Xue and Lu Zhang)
 
     **Abstract**: The $q^5$-characteristics model estimates costs of equity as Lewellen's (2015) out-of-sample forecasts from cross-sectional regressions. The $q^5$-costs of equity outperform accounting costs of equity in cross-sectional tests. Our estimates are unbiased, whereas accounting costs of equity are biased downward for big firms (and upward for microcaps). The $q^5$-costs of equity are weakly left-skewed at the firm level, precise at the industry level, and aligned with average factor premiums. However, accounting costs of equity outperform ours in time series tests. Factor models perform poorly in out-of-sample tests. Gradient-boosted trees improve on cross-sectional regressions, but not reliably.
 
