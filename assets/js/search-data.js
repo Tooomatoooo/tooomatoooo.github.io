@@ -77,13 +77,7 @@ const baseActions = [{
       handler: () => {
         setThemeSetting("system");
       },
-    },];const bonusActions = [{id: "bonus-bear",
-        title: "🐻 Bear",
-        description: "You found the bear.",
-        section: "Bonus",
-        terms: ["bear","bears",],
-        handler: () => {window.location.href = "/bear/";},
-      },{id: "bonus-cat",
+    },];const bonusActions = [{id: "bonus-cat",
         title: "🐈 Cat",
         description: "A wall of cat photos.",
         section: "Bonus",
