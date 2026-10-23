@@ -613,7 +613,7 @@ footer.sticky-bottom {
   }
 }
 
-.footer-bear {
+.footer-runner {
   display: inline-block;
   text-decoration: none;
   transition: transform 0.2s ease-in-out;
@@ -626,7 +626,7 @@ footer.sticky-bottom {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .footer-bear {
+  .footer-runner {
     transition: none;
 
     &:hover,

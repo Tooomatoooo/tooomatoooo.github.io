@@ -363,11 +363,12 @@ const baseActions = [
   so browsing the palette does not give them away. ninja-keys scores against
   title text plus description, and renders only the title in a result row, so
   each page carries a search_title holding the word people actually type while
-  the page's own title stays as the bare emoji.
+  the page's own title stays as the bare emoji. A bonus page without
+  search_terms (/run/) never surfaces here; it is reached only from the footer.
 {%- endcomment -%}
 const bonusActions = [
   {%- for p in site.pages -%}
-    {%- if p.bonus -%}
+    {%- if p.bonus and p.search_terms -%}
       {
         {%- assign title = p.search_title | default: p.title | strip | truncatewords: 13 -%}
         {%- assign blurb = p.description | strip_html | strip_newlines | strip -%}
