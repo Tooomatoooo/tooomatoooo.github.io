@@ -147,4 +147,25 @@
       </div>
     </progress>
   {% endif %}
+  {% if site.navbar_fixed %}
+    <!--
+      Clear the fixed navbar before the page content is drawn. Its real height
+      (font- and width-dependent) differs from the stylesheet's 56px, and setting
+      the padding only after load made every page jump down. The observer keeps
+      it in step when the navbar resizes (window width, web font swap).
+    -->
+    <script>
+      (function () {
+        var nav = document.getElementById("navbar");
+        var progress = document.getElementById("progress");
+        function sync() {
+          var height = nav.getBoundingClientRect().height + "px";
+          document.body.style.paddingTop = height;
+          if (progress) progress.style.top = height;
+        }
+        sync();
+        if (window.ResizeObserver) new ResizeObserver(sync).observe(nav);
+      })();
+    </script>
+  {% endif %}
 </header>

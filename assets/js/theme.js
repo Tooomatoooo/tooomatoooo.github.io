@@ -13,19 +13,23 @@ let toggleThemeSetting = () => {
 };
 
 // Change the theme setting and apply the theme.
-let setThemeSetting = (themeSetting) => {
+let setThemeSetting = (themeSetting, animate = true) => {
   localStorage.setItem("theme", themeSetting);
 
   document.documentElement.setAttribute("data-theme-setting", themeSetting);
 
-  applyTheme();
+  applyTheme(animate);
 };
 
-// Apply the computed dark or light theme to the website.
-let applyTheme = () => {
+// Apply the computed dark or light theme to the website. The cross-fade is only
+// for a theme change on an open page: on page load it would animate every layout
+// change in the first moments too, so content visibly slid into place.
+let applyTheme = (animate = true) => {
   let theme = determineComputedTheme();
 
-  transTheme();
+  if (animate) {
+    transTheme();
+  }
   setHighlight(theme);
   setGiscusTheme(theme);
   setSearchTheme(theme);
@@ -280,7 +284,7 @@ let determineComputedTheme = () => {
 let initTheme = () => {
   let themeSetting = determineThemeSetting();
 
-  setThemeSetting(themeSetting);
+  setThemeSetting(themeSetting, false);
 
   // Add event listener to the theme toggle button.
   document.addEventListener("DOMContentLoaded", function () {

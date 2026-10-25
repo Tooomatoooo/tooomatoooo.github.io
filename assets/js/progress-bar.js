@@ -45,11 +45,9 @@ function getCurrentScrollPosition() {
   return $(window).scrollTop();
 }
 
+// The body padding and the bar's offset below the fixed navbar are kept in step
+// by the inline script in header.liquid, before the page first paints.
 function initializeProgressElement() {
-  let navbarHeight = $("#navbar").outerHeight(true);
-  $("body").css({ "padding-top": navbarHeight });
-  $("progress-container").css({ "padding-top": navbarHeight });
-  progressBar.css({ top: navbarHeight });
   progressBar.attr({
     max: getDistanceToScroll(),
     value: getCurrentScrollPosition(),
