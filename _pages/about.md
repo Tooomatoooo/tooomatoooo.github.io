@@ -22,7 +22,7 @@ social: true # includes social icons at the bottom of the page
 
 Hi, I am Yicheng Liu (刘忆澄). I am a sixth-year PhD candidate in Finance at The Ohio State University.
 
-My research lies in the field of asset pricing and macro-finance, with a special focus on intangible capital, market power, and firm valuation.
+I study asset pricing and macro-finance, with a focus on using asset pricing tools to understand how firms interact with the broader economy. My job market paper examines how intangible capital creates value through production and market power.
 
 I am on the 2026–2027 job market.
 
