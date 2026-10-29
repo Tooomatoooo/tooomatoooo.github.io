@@ -24,7 +24,11 @@ papers:
 <div style="margin-bottom: 0.7em;"></div>
 
 1. <span id="intangibles" class="paper-anchor"></span>[**What Are Intangibles Worth? Production versus Market Power**]({{ site.baseurl }}/assets/pdf/Intangibles_YichengLiu.pdf)
-    (Job market paper) <a class="paper-btn paper-btn-inline" href="{{ site.baseurl }}/assets/pdf/Intangibles_YichengLiu.pdf">PDF</a>
+    (Job market paper)
+
+    <div class="paper-links">
+      <a class="paper-btn" href="{{ site.baseurl }}/assets/pdf/Intangibles_YichengLiu.pdf">PDF</a>
+    </div>
 
     **Abstract**: How much of intangible capital's value comes from production efficiency versus market power? I estimate a dynamic firm model and quantify both channels for each U.S. public firm. Market power accounts for the majority of intangible value and nearly 30% of aggregate firm value. The two channels evolve differently: across firms, those with greater production value capture market share, whereas within firms, intangible value shifts toward market power as firms mature. Intangible-driven market power also helps explain the value premium decline and predicts intangible investment more strongly than production value does.
 
@@ -47,7 +51,7 @@ papers:
       <p>We study how institutional investors’ subjective risk premia shape variation in their expected returns over time and across institutions. Our analysis uses long-term Capital Market Assumptions from asset managers and investment consultants from 1987 to 2022. Most of the countercyclicality and overall time variation in institutional expected returns reflects variation in perceived market risk premia, not perceived mispricing or alphas more generally. This risk premium effect is driven almost entirely by variation in perceived risk quantities rather than risk price (risk aversion). Expected return disagreement across institutions rises with macro-financial uncertainty and is also explained primarily by disagreement about market risk premia. However, unlike the time-series results, alphas account for a quantitatively important share of disagreement, and the price and quantity of risk contribute roughly equally to the risk premium effect. These findings provide benchmark moments that asset pricing models should match to be consistent with institutional investors’ beliefs.</p>
     </div>
 
-     - [Best Paper Award, Finance Down Under (J Spencer Martin Best Paper Award)](https://fbe.unimelb.edu.au/conferences/fdu#program)
+     - [**Best Paper Award**, Finance Down Under (J Spencer Martin Best Paper Award)](https://fbe.unimelb.edu.au/conferences/fdu#program)
      - **Conferences**: 2026 SFS Cavalcade; 2026 Finance Down Under; 2026 Young Scholars Finance Consortium; 2025 Carey Finance Conference at Johns Hopkins; 2025 Helsinki Finance Summit on Investor Behavior; 2025 Ohio State Finance Alumni Conference; 2025 FSU Truist Beach Conference; 2025 MFA; 2025 Hedge Fund Research Conference; 2024 Annual Valuation Workshop at Wharton; 2024 Wabash River Conference at Purdue
      {: .paper-notes}
 
@@ -70,14 +74,4 @@ papers:
 
      - **Conferences**: UConn Finance Conference
 
-<script>
-  // "Full abstract" buttons open and close the full abstract below them.
-  document.querySelectorAll(".paper-links [aria-controls]").forEach(function (button) {
-    var abstract = document.getElementById(button.getAttribute("aria-controls"));
-    button.addEventListener("click", function () {
-      var open = button.getAttribute("aria-expanded") === "true";
-      button.setAttribute("aria-expanded", String(!open));
-      abstract.hidden = open;
-    });
-  });
-</script>
+{% include paper_abstract_toggle.liquid %}

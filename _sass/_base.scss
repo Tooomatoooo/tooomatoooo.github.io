@@ -568,10 +568,10 @@ footer.sticky-bottom {
   margin-top: 0.4rem;
 }
 
-// A button sitting in the title line itself (the job market paper's PDF).
-.paper-btn-inline {
-  margin-left: 0.4rem;
-  vertical-align: 0.1em;
+// The job market paper section on the About page starts below the profile photo.
+.jmp-heading {
+  clear: both;
+  padding-top: 0.75rem;
 }
 
 .paper-abstract {

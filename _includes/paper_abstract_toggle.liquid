@@ -1,0 +1,11 @@
+<script>
+  // "Full abstract" buttons open and close the full abstract below them.
+  document.querySelectorAll(".paper-links [aria-controls]").forEach(function (button) {
+    var abstract = document.getElementById(button.getAttribute("aria-controls"));
+    button.addEventListener("click", function () {
+      var open = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", String(!open));
+      abstract.hidden = open;
+    });
+  });
+</script>
