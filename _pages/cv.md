@@ -11,7 +11,7 @@ cv_pdf: CV_YichengLiu.pdf # you can also use external links here
 
 ---
 
-<p>If the PDF does not display, you can download it here: <a href="{{ site.baseurl }}/assets/pdf/{{ page.cv_pdf }}">Download CV (PDF)</a>.</p>
+<p><a href="{{ site.baseurl }}/assets/pdf/{{ page.cv_pdf }}">Download CV (PDF)</a></p>
 
 <div style="position:relative;padding-bottom:75%;height:0;overflow:hidden;">
   <iframe src="{{ site.baseurl }}/assets/pdf/{{ page.cv_pdf }}"
