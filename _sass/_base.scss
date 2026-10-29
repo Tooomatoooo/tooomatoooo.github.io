@@ -528,6 +528,58 @@ footer.sticky-bottom {
   scroll-margin-top: 66px;
 }
 
+// Research page: a row of outlined buttons under each paper (Full abstract, PDF,
+// SSRN), after the theme's publication buttons. The Full abstract button reveals the
+// paper's full abstract below the row.
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  // The row follows the title paragraph, whose 1rem bottom margin collapses
+  // with this one; a negative top margin pulls the row up to sit ~0.55rem
+  // under the title.
+  margin: -0.45rem 0 0.8rem;
+}
+
+.paper-btn {
+  display: inline-block;
+  padding: 0.05rem 0.6rem;
+  font: inherit;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--global-text-color);
+  background-color: transparent;
+  border: 1px solid var(--global-text-color);
+  border-radius: 0.25rem;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible,
+  &[aria-expanded="true"] {
+    color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+    text-decoration: none;
+  }
+}
+
+// Award and conference bullets under a paper: a little air between items so a
+// long conference list does not run into the line above it.
+.paper-notes > li + li {
+  margin-top: 0.4rem;
+}
+
+// A button sitting in the title line itself (the job market paper's PDF).
+.paper-btn-inline {
+  margin-left: 0.4rem;
+  vertical-align: 0.1em;
+}
+
+.paper-abstract {
+  margin-bottom: 0.8rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--global-divider-color);
+}
+
 // Bonus pages: hidden from the navbar, reachable through search.
 .bonus-title {
   display: inline-block;
