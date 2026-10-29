@@ -22,7 +22,7 @@ social: true # includes social icons at the bottom of the page
 
 Hi, I am Yicheng Liu (刘忆澄). I am a sixth-year PhD candidate in Finance at The Ohio State University.
 
-I study **asset pricing** and **macro-finance**. My research uses asset pricing tools to understand how firms interact with the broader economy. My **job market paper** decomposes the value of intangible capital into two sources: production and market power.
+I study **asset pricing** and **macro-finance**. My research uses asset pricing tools to understand how firms interact with the broader economy. My **job market paper** quantifies how intangible capital creates value by improving production and shaping firms' competitive environment.
 
 I am on the 2026–2027 job market.
 
