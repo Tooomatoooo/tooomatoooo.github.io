@@ -41,7 +41,7 @@ Email: [liu.9716@osu.edu](mailto:liu.9716@osu.edu)
 Market power accounts for the majority of intangible value and nearly 30% of aggregate firm value.
 
 <div class="paper-abstract" id="abstract-jmp" hidden>
-  <p>How much of intangible capital's value comes from production efficiency versus market power? I estimate a dynamic firm model and quantify both channels for each U.S. public firm. Market power accounts for the majority of intangible value and nearly 30% of aggregate firm value. The two channels evolve differently: across firms, those with greater production value capture market share, whereas within firms, intangible value shifts toward market power as firms mature. Intangible-driven market power also helps explain the value premium decline and predicts intangible investment more strongly than production value does.</p>
+  <p>How much of intangible capital's value comes from production efficiency versus market power? I develop and estimate a dynamic firm model to quantify both channels for each U.S. public firm. Market power accounts for the majority of intangible value and nearly 30% of aggregate firm value. The two channels evolve differently: across firms, those with greater production value capture market share, whereas within firms, intangible value shifts toward market power as firms mature. Intangible-driven market power also helps explain the value premium decline and predicts intangible investment more strongly than production value does.</p>
 </div>
 
 {% include paper_abstract_toggle.liquid %}
