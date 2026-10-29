@@ -53,6 +53,7 @@ papers:
 
      - [**Best Paper Award**, Finance Down Under (J Spencer Martin Best Paper Award)](https://fbe.unimelb.edu.au/conferences/fdu#program)
      - **Conferences**: 2026 SFS Cavalcade; 2026 Finance Down Under; 2026 Young Scholars Finance Consortium; 2025 Carey Finance Conference at Johns Hopkins; 2025 Helsinki Finance Summit on Investor Behavior; 2025 Ohio State Finance Alumni Conference; 2025 FSU Truist Beach Conference; 2025 MFA; 2025 Hedge Fund Research Conference; 2024 Annual Valuation Workshop at Wharton; 2024 Wabash River Conference at Purdue
+     - Media Coverage: [Larry Swedroe’s Substack](https://larryswedroe.substack.com/p/understanding-what-really-drives)
      {: .paper-notes}
 
 <br>
