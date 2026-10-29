@@ -92,6 +92,13 @@
   <script>
     initTheme();
   </script>
+{% else %}
+  <script>
+    // theme.js is not loaded, but common.js and search-setup.js still ask it for the theme.
+    function determineComputedTheme() {
+      return "light";
+    }
+  </script>
 {% endif %}
 
 {% if page.map %}
